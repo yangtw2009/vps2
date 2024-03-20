@@ -25,13 +25,14 @@ jobs:
           # Set up the password for the root user to "admin"
           echo 'root:frepai' | sudo chpasswd
 
-      - name: Install ngrok 3.2.0
+      - name: Install ngrok
         run: |
-          # Download ngrok 3.2.0
+          # Download ngrok
           wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip
-          unzip ngrok-stable-linux-amd64.zip
-          chmod +x ngrok
-          sudo mv ngrok /usr/local/bin/
+unzip ngrok-stable-linux-amd64.zip
+chmod +x ngrok
+sudo mv ngrok /usr/local/bin/
+
 
       - name: Start ngrok TCP tunnel
         run: |
