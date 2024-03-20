@@ -33,6 +33,9 @@ jobs:
           chmod +x ngrok
           mv ngrok /usr/local/bin/
 
+          # Update ngrok to the latest version
+          ngrok update
+
       - name: Start ngrok TCP tunnel
         run: |
           # Retrieve the ngrok authtoken from GitHub secrets
